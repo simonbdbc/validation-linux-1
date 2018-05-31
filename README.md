@@ -8,9 +8,9 @@ A super-simple install.sh to setup a LAMP stack inside Vagrant 100% automaticall
 
 This is a Vagrant setup file for a quick development stack. It will:
 
-* install Virtualbox (v5.1.30)
+* install Virtualbox 
 
-* install Vagrant (v2.0.1)
+* install Vagrant 
 
 * while installing all standard output are redirect to `/.install.log`
 
@@ -49,6 +49,10 @@ The bootstrap.sh will:
 * while provisioning all standard output are redirect to `/vagrant/.vagrant/vm-build.log`
 
 ### How to use ?
+
+* required Virtualbox (min v5.1.30)
+
+* required Vagrant (min v2.0.1)
 
 * Put install-v2.sh inside the box folder (an empty folder) and execute it by do a `'bash install-v2.sh'` on the command line.
 
