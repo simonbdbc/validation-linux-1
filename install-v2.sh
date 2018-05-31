@@ -45,6 +45,11 @@ command -v vagrant >./.install.log 2>&1 || {
 echo "
 ----------------------------------------------------------
      "
+# update / upgrade
+exe '--- Update Packages List ---' \
+    sudo apt-get -y update
+exe '--- Install Upgade Packages ---' \
+    sudo apt-get -y upgrade
 
 # ask about folder name
 echo "

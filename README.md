@@ -8,6 +8,12 @@ A super-simple install.sh to setup a LAMP stack inside Vagrant 100% automaticall
 
 This is a Vagrant setup file for a quick development stack. It will:
 
+* install Virtualbox (v5.1.30)
+
+* install Vagrant (v2.0.1)
+
+* while installing all standard output are redirect to `/.install.log`
+
 * Ask you about:
 
   * select a project folder name and make it, `'data'` by default
@@ -16,7 +22,7 @@ This is a Vagrant setup file for a quick development stack. It will:
 
   * select an IP and make the box accessable by the host at this IP, `'192.168.33.83'` by default
 
-  * select a password for MySQL setup, `'0000'` by default
+  * select a password for MySQL setup, `'0000'` by default (if you want to install it)
 
 * sync the project folder selected with `'/var/www/html'` inside the box
 
@@ -26,9 +32,9 @@ The bootstrap.sh will:
 
 * update, upgrade
 
-* install apache2, php 7.0, MySQL and php dependencies
+* install apache2, php 7.0, MySQL and php dependencies (if you want to install each of them)
 
-* activate all error_reporting, display_errors and display_startup_errors in the php.ini file
+* activate all error_reporting, display_errors and display_startup_errors in the php.ini file (if you install php)
 
 * add `'Options +Indexes +FollowSymLinks +MultiViews'` , `'AllowOverride All'` and `'Require all granted'` to the vhost settings (000-default.conf)
 
@@ -36,7 +42,7 @@ The bootstrap.sh will:
 
 * service apache2 restart
 
-* verify Composer installer SHA-384 signature and install it
+* verify Composer installer SHA-384 signature and install it (if you choose to install it)
 
 * cleaning the installation by deleting the index.html file from Apache2 and deleting the bootstrap.sh file when its job is done
 
@@ -44,11 +50,7 @@ The bootstrap.sh will:
 
 ### How to use ?
 
-* install Virtualbox (v5.1.30)
-
-* install Vagrant (v2.0.1)
-
-* Put install.sh inside the box folder (an empty folder) and execute it by do a `'bash install.sh'` on the command line.
+* Put install-v2.sh inside the box folder (an empty folder) and execute it by do a `'bash install-v2.sh'` on the command line.
 
 ### Thanks 
 
